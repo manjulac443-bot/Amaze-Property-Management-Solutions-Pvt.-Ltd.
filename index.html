@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>On-site Recruitment Sheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">A</div>
+    <div>
+      <p class="eyebrow">Amaze Property Management Solutions Pvt. Ltd.</p>
+      <h1>On-site recruitment sheet</h1>
+    </div>
+    <div class="status-pill"><span></span> Secure intake</div>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro-row">
+      <div>
+        <p class="kicker">Candidate intake / 01</p>
+        <h2>Build your profile once.<br><em>We’ll take it from here.</em></h2>
+      </div>
+      <p class="intro-copy">Complete the recruitment sheet with accurate information. Your entry will be recorded as a new row for the operations team.</p>
+    </section>
+
+    <form id="biodata-form" novalidate>
+      <section class="form-section accent-section">
+        <div class="section-heading"><span>01</span><div><h3>Identity &amp; role</h3><p>Start with the details we use to identify your application.</p></div></div>
+        <div class="photo-field">
+          <div class="photo-preview" id="photo-preview"><span>No photo selected</span></div>
+          <div>
+            <label class="photo-upload-button" for="candidate-photo">Upload photo</label>
+            <input id="candidate-photo" class="photo-input" type="file" accept="image/jpeg,image/png">
+            <small>Optional · JPG or PNG · up to 8 MB</small>
+          </div>
+        </div>
+        <div class="field-grid">
+          <label class="field span-2">Name of the Unit *<input name="unit_name" required placeholder="e.g. Amaze Facility Services"></label>
+          <label class="field span-2">Name *<input name="name" required placeholder="Full name as on your ID"></label>
+          <label class="field span-2">Father’s / Husband’s Name *<input name="father_husband_name" required></label>
+          <label class="field">DOB / Age *<input name="dob_age" required placeholder="DD/MM/YYYY or age"></label>
+          <label class="field">Blood Group<select name="blood_group"><option value="">Select blood group</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+          <label class="field span-2">Education / Technical Qualification *<input name="education" required></label>
+          <label class="field span-2">Previous post, organization &amp; phone number<input name="previous_employment" placeholder="Role, organization, contact"></label>
+          <label class="field">Phone No. *<input name="phone" type="tel" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" minlength="10" placeholder="10-digit mobile number"></label>
+          <label class="field">Marital Status *<select name="marital_status" required><option value="">Select status</option><option>Single</option><option>Married</option><option>Widowed</option><option>Divorced</option></select></label>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="section-heading"><span>02</span><div><h3>Addresses &amp; verification</h3><p>Give complete address details so the field team can verify them.</p></div></div>
+        <div class="address-block"><div class="address-title">Permanent address</div><div class="field-grid"><label class="field span-2">Permanent Address *<textarea name="permanent_address" required rows="3"></textarea></label><label class="field">Phone No. *<input name="permanent_phone" type="tel" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" minlength="10"></label><label class="field">Police Station *<input name="permanent_police_station" required></label></div></div>
+        <div class="address-block"><div class="address-title">Present address with door no.</div><div class="field-grid"><label class="field span-2">Present Address *<textarea name="present_address" required rows="3"></textarea></label><label class="field">Phone No. *<input name="present_phone" type="tel" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" minlength="10"></label><label class="field">Police Station *<input name="present_police_station" required></label></div></div>
+      </section>
+
+      <section class="form-section">
+        <div class="section-heading"><span>03</span><div><h3>Health &amp; certificates</h3><p>Mark what you can submit with your application.</p></div></div>
+        <label class="field full-field">Are you vaccinated? If so, furnish details *<textarea name="vaccination_details" required rows="2" placeholder="Vaccinated / not vaccinated, dose details, dates"></textarea></label>
+        <div class="certificate-table">
+          <div class="table-header"><span>Certificate</span><span>Original</span><span>Photo copy</span><span>Remarks</span></div>
+          <div class="table-row"><strong>Aadhaar Card</strong><label class="check"><input type="checkbox" name="aadhaar_original"> <span>Yes</span></label><label class="check"><input type="checkbox" name="aadhaar_photocopy"> <span>Yes</span></label><input name="aadhaar_remarks" placeholder="Add note"></div>
+          <div class="table-row"><strong>Current Address Proof</strong><label class="check"><input type="checkbox" name="current_address_proof_original"> <span>Yes</span></label><label class="check"><input type="checkbox" name="current_address_proof_photocopy"> <span>Yes</span></label><input name="current_address_proof_remarks" placeholder="Add note"></div>
+          <div class="table-row"><strong>ESI No. (Back Office Responsibility)</strong><label class="check"><input type="checkbox" name="esi_no_original"> <span>Yes</span></label><label class="check"><input type="checkbox" name="esi_no_photocopy"> <span>Yes</span></label><input name="esi_no_remarks" placeholder="Add note"></div>
+          <div class="table-row"><strong>PF No. (Back Office Responsibility)</strong><label class="check"><input type="checkbox" name="pf_no_original"> <span>Yes</span></label><label class="check"><input type="checkbox" name="pf_no_photocopy"> <span>Yes</span></label><input name="pf_no_remarks" placeholder="Add note"></div>
+          <div class="table-row"><strong>Bank Account Details</strong><label class="check"><input type="checkbox" name="bank_account_details_original"> <span>Yes</span></label><label class="check"><input type="checkbox" name="bank_account_details_photocopy"> <span>Yes</span></label><input name="bank_account_details_remarks" placeholder="Add note"></div>
+          <div class="table-row"><strong>Educational Certificates</strong><label class="check"><input type="checkbox" name="educational_certificates_original"> <span>Yes</span></label><label class="check"><input type="checkbox" name="educational_certificates_photocopy"> <span>Yes</span></label><input name="educational_certificates_remarks" placeholder="Add note"></div>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="section-heading"><span>04</span><div><h3>Declaration &amp; handover</h3><p>Confirm the information and tell us when the role begins.</p></div></div>
+        <label class="declaration"><input type="checkbox" name="declaration" value="I confirm the above information is true and correct." required><span>I declare that the information furnished by me is true and correct to the best of my knowledge. *</span></label>
+        <div class="field-grid"><label class="field">Signature / Thumb Print of Employee *<input name="signature" required placeholder="Type full name as signature"></label><label class="field">DOJ *<input name="doj" type="date" required></label><label class="field">Name of the Operations Officer *<input name="operations_officer" required></label><label class="field">Date *<input name="operations_date" type="date" required></label></div>
+      </section>
+
+      <div class="form-footer"><p><strong>Before submitting:</strong> Check that your phone numbers and certificate status are correct.</p><button type="submit" id="submit-button">Submit application <span>→</span></button></div>
+      <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+  <dialog id="submission-dialog" class="submission-dialog" aria-labelledby="submission-title">
+    <div class="dialog-mark" aria-hidden="true">✓</div>
+    <h2 id="submission-title">Application submitted</h2>
+    <p id="submission-message"></p>
+    <a id="download-pdf-link" class="download-pdf-link">Download PDF copy</a>
+    <button type="button" id="close-submission-dialog">Done</button>
+  </dialog>
+  <script src="static/app.js"></script>
+</body>
+</html>
